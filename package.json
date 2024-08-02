@@ -1,0 +1,19 @@
+{
+    "name": "flask-ts-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "concurrently \"npm run watch\" \"python app.py\"",
+        "watch": "esbuild src/main.ts --bundle --outfile=static/js/main.js --watch",
+        "build": "esbuild src/main.ts --bundle --outfile=static/js/main.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "esbuild": "0.23.0",
+        "tsc-watch": "^6.2.0",
+        "typescript": "^5.5.4"
+    }
+}
